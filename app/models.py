@@ -13,6 +13,10 @@ class User(db.Model):
 class Strain(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(64), index = True)
+    effect = db.Column(db.String(64))
+    """
+    effect is one of appetite,fatigue,pain,anxiety,high, (use ints to save space?)
+    """
     #thumbnail
 
     def __repr__(self):
